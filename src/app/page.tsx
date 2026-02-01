@@ -253,8 +253,8 @@ export default function Home() {
             <div
               className="aspect-square rounded-2xl bg-cover"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=800&q=80')",
-                backgroundPosition: "center top",
+                backgroundImage: "url('/misha.jpg')",
+                backgroundPosition: "center",
               }}
             />
             <div>
