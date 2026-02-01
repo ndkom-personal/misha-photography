@@ -1,19 +1,18 @@
 "use client";
 
-import Image from "next/image";
-
 export default function ClientLogos() {
+  // Using Simple Icons CDN which is more reliable
   const companies = [
-    { name: "Google", domain: "google.com" },
-    { name: "Salesforce", domain: "salesforce.com" },
-    { name: "Uber", domain: "uber.com" },
-    { name: "Airbnb", domain: "airbnb.com" },
-    { name: "Stripe", domain: "stripe.com" },
-    { name: "Dropbox", domain: "dropbox.com" },
-    { name: "Slack", domain: "slack.com" },
-    { name: "Figma", domain: "figma.com" },
-    { name: "Coinbase", domain: "coinbase.com" },
-    { name: "Lyft", domain: "lyft.com" },
+    { name: "Google", slug: "google", color: "#4285F4" },
+    { name: "Salesforce", slug: "salesforce", color: "#00A1E0" },
+    { name: "Uber", slug: "uber", color: "#000000" },
+    { name: "Airbnb", slug: "airbnb", color: "#FF5A5F" },
+    { name: "Stripe", slug: "stripe", color: "#635BFF" },
+    { name: "Dropbox", slug: "dropbox", color: "#0061FF" },
+    { name: "Slack", slug: "slack", color: "#4A154B" },
+    { name: "Figma", slug: "figma", color: "#F24E1E" },
+    { name: "Coinbase", slug: "coinbase", color: "#0052FF" },
+    { name: "Lyft", slug: "lyft", color: "#FF00BF" },
   ];
 
   return (
@@ -27,16 +26,15 @@ export default function ClientLogos() {
             {[...companies, ...companies].map((company, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                className="flex-shrink-0 mx-8 flex items-center gap-2 opacity-60 hover:opacity-100 transition duration-300"
               >
-                <Image
-                  src={`https://logo.clearbit.com/${company.domain}`}
+                <img
+                  src={`https://cdn.simpleicons.org/${company.slug}/gray`}
                   alt={company.name}
-                  width={100}
-                  height={40}
-                  className="h-8 w-auto object-contain"
-                  unoptimized
+                  className="h-6 w-6"
+                  loading="lazy"
                 />
+                <span className="text-gray-600 font-medium text-sm">{company.name}</span>
               </div>
             ))}
           </div>
@@ -52,7 +50,7 @@ export default function ClientLogos() {
           }
         }
         .animate-scroll {
-          animation: scroll 25s linear infinite;
+          animation: scroll 30s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
