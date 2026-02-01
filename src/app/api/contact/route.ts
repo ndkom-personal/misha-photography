@@ -6,8 +6,8 @@ export async function POST(request: Request) {
     const data = await request.json();
 
     const serviceNames: Record<string, string> = {
-      business: "Business Photography ($600)",
-      portrait: "Business Photography ($600)",
+      business: "Business Photography ($599)",
+      portrait: "Business Photography ($599)",
       family: "Family Session ($899)",
     };
 

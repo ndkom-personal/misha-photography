@@ -91,7 +91,7 @@ export default function Home() {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-playfair text-2xl font-bold">Business Photography</h3>
                   <div className="text-right">
-                    <span className="text-3xl font-bold text-gray-900">$600</span>
+                    <span className="text-3xl font-bold text-gray-900">$599</span>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">
