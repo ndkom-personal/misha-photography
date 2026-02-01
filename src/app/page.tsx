@@ -82,9 +82,10 @@ export default function Home() {
             {/* Service 1: Business Photography */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
               <div
-                className="h-64 bg-cover bg-top"
+                className="h-64 bg-cover"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80')",
+                  backgroundImage: "url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80')",
+                  backgroundPosition: "center 20%",
                 }}
               />
               <div className="p-8">
@@ -214,30 +215,30 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80",
-              "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-              "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80",
-              "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80",
-              "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
-              "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80",
-              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
-              "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
-              "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80",
-              "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
-              "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80",
-              "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
-              "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
-              "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&q=80",
-              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
-            ].map((src, index) => (
+              { src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80", position: "center 30%" },
+              { src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80", position: "center 30%" },
+              { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&q=80", position: "center top" },
+              { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80", position: "center top" },
+            ].map((img, index) => (
               <div
                 key={index}
                 className="aspect-square rounded-lg overflow-hidden hover:opacity-90 transition cursor-pointer"
               >
                 <div
-                  className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: `url('${src}')` }}
+                  className="w-full h-full bg-cover"
+                  style={{ backgroundImage: `url('${img.src}')`, backgroundPosition: img.position }}
                 />
               </div>
             ))}
@@ -250,9 +251,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div
-              className="aspect-square rounded-2xl bg-cover bg-center"
+              className="aspect-square rounded-2xl bg-cover"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=800&q=80')",
+                backgroundPosition: "center top",
               }}
             />
             <div>
