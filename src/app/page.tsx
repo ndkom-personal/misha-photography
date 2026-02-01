@@ -1,18 +1,14 @@
 import BookingForm from "@/components/BookingForm";
 import ClientLogos from "@/components/ClientLogos";
+import HeroGrid from "@/components/HeroGrid";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gray-900">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30 z-10" />
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80')",
-          }}
-        />
+      {/* Hero Section with Photo Grid */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+        <HeroGrid />
+        <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
           <p className="text-lg mb-4 tracking-wider uppercase">San Francisco Bay Area</p>
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6">
@@ -86,16 +82,16 @@ export default function Home() {
             {/* Service 1: Business Photography */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
               <div
-                className="h-64 bg-cover bg-center"
+                className="h-64 bg-cover bg-top"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80')",
+                  backgroundImage: "url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80')",
                 }}
               />
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-playfair text-2xl font-bold">Business Photography</h3>
                   <div className="text-right">
-                    <span className="text-3xl font-bold text-gray-900">$599</span>
+                    <span className="text-3xl font-bold text-gray-900">$600</span>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">
@@ -147,14 +143,14 @@ export default function Home() {
               <div
                 className="h-64 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80')",
+                  backgroundImage: "url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&q=80')",
                 }}
               />
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-playfair text-2xl font-bold">Family Session</h3>
                   <div className="text-right">
-                    <span className="text-3xl font-bold text-gray-900">$499</span>
+                    <span className="text-3xl font-bold text-gray-900">$899</span>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">
@@ -218,18 +214,22 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+              "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80",
               "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
               "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
               "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80",
-              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80",
+              "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80",
               "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
               "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80",
-              "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80",
+              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
               "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
               "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80",
               "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
               "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80",
+              "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
+              "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
+              "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&q=80",
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
             ].map((src, index) => (
               <div
                 key={index}
@@ -352,8 +352,8 @@ export default function Home() {
               { name: "Embarcadero", icon: "⚓" },
               { name: "Painted Ladies", icon: "🏠" },
               { name: "Presidio", icon: "🌲" },
-              { name: "Mission District", icon: "🎨" },
-              { name: "Financial District", icon: "🏙️" },
+              { name: "Castro District", icon: "🏳️‍🌈" },
+              { name: "Transamerica Pyramid", icon: "🏙️" },
             ].map((location, index) => (
               <div key={index} className="p-4">
                 <div className="text-4xl mb-2">{location.icon}</div>

@@ -1,27 +1,19 @@
 "use client";
 
+import Image from "next/image";
+
 export default function ClientLogos() {
   const companies = [
-    "Google",
-    "Meta",
-    "Salesforce",
-    "Uber",
-    "Airbnb",
-    "Stripe",
-    "Square",
-    "Dropbox",
-    "Twitter",
-    "LinkedIn",
-    "Adobe",
-    "Slack",
-    "Figma",
-    "Notion",
-    "Coinbase",
-    "DoorDash",
-    "Instacart",
-    "Lyft",
-    "Pinterest",
-    "Yelp",
+    { name: "Google", domain: "google.com" },
+    { name: "Salesforce", domain: "salesforce.com" },
+    { name: "Uber", domain: "uber.com" },
+    { name: "Airbnb", domain: "airbnb.com" },
+    { name: "Stripe", domain: "stripe.com" },
+    { name: "Dropbox", domain: "dropbox.com" },
+    { name: "Slack", domain: "slack.com" },
+    { name: "Figma", domain: "figma.com" },
+    { name: "Coinbase", domain: "coinbase.com" },
+    { name: "Lyft", domain: "lyft.com" },
   ];
 
   return (
@@ -31,13 +23,20 @@ export default function ClientLogos() {
           Trusted by professionals from
         </p>
         <div className="relative">
-          <div className="flex animate-scroll">
+          <div className="flex animate-scroll items-center">
             {[...companies, ...companies].map((company, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 mx-8 text-2xl font-bold text-gray-300 hover:text-gray-400 transition"
+                className="flex-shrink-0 mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-300"
               >
-                {company}
+                <Image
+                  src={`https://logo.clearbit.com/${company.domain}`}
+                  alt={company.name}
+                  width={100}
+                  height={40}
+                  className="h-8 w-auto object-contain"
+                  unoptimized
+                />
               </div>
             ))}
           </div>
@@ -53,7 +52,7 @@ export default function ClientLogos() {
           }
         }
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 25s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;

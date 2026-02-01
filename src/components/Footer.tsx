@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="font-playfair text-2xl font-bold mb-4">Misha Photography</h3>
+            <h3 className="font-playfair text-2xl font-bold mb-4">Misha Bay Photography</h3>
             <p className="text-gray-400 mb-4">
               Professional portrait and family photography in San Francisco.
               Capturing authentic moments since 2019.
@@ -46,13 +46,13 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="mailto:hello@mishaphoto.com" className="hover:text-white transition">
-                  hello@mishaphoto.com
+                <a href="mailto:mishabayarea@gmail.com" className="hover:text-white transition">
+                  mishabayarea@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+14155551234" className="hover:text-white transition">
-                  (415) 555-1234
+                <a href="tel:+16194383424" className="hover:text-white transition">
+                  +1 (619) 438-3424
                 </a>
               </li>
               <li className="pt-4">
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Misha Photography. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Misha Bay Photography. All rights reserved.</p>
         </div>
       </div>
     </footer>

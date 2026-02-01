@@ -16,9 +16,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mishabay.com"),
   title: {
-    default: "Misha Photography | Professional Portraits in San Francisco",
-    template: "%s | Misha Photography",
+    default: "Misha Bay Photography | Professional Portraits in San Francisco",
+    template: "%s | Misha Bay Photography",
   },
   description: "Professional portrait and family photography in San Francisco. 5+ years experience capturing authentic moments at iconic Bay Area locations. Book your session today.",
   keywords: [
@@ -32,18 +33,18 @@ export const metadata: Metadata = {
     "Golden Gate photos",
     "Bay Area family portraits",
   ],
-  authors: [{ name: "Misha Photography" }],
-  creator: "Misha Photography",
+  authors: [{ name: "Misha Bay Photography" }],
+  creator: "Misha Bay Photography",
   openGraph: {
-    title: "Misha Photography | San Francisco Portrait Photographer",
+    title: "Misha Bay Photography | San Francisco Portrait Photographer",
     description: "Professional portrait and family photography in San Francisco. Book your session today.",
     type: "website",
     locale: "en_US",
-    siteName: "Misha Photography",
+    siteName: "Misha Bay Photography",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Misha Photography | San Francisco Portrait Photographer",
+    title: "Misha Bay Photography | San Francisco Portrait Photographer",
     description: "Professional portrait and family photography in San Francisco.",
   },
   robots: {
