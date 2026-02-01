@@ -1,4 +1,5 @@
 import BookingForm from "@/components/BookingForm";
+import ClientLogos from "@/components/ClientLogos";
 
 export default function Home() {
   return (
@@ -9,15 +10,16 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1920&q=80')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80')",
           }}
         />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
+          <p className="text-lg mb-4 tracking-wider uppercase">San Francisco Bay Area</p>
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6">
             Capturing Your <span className="italic">Authentic</span> Story
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
-            Professional portrait & family photography in San Francisco
+            Professional photography for LinkedIn, personal branding, and family moments
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -42,28 +44,31 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
               <div className="text-4xl mb-4">📸</div>
-              <h3 className="font-semibold text-xl mb-2">5+ Years Experience</h3>
+              <h3 className="font-semibold text-xl mb-2">5+ Years in San Francisco</h3>
               <p className="text-gray-600">
-                Capturing San Francisco&apos;s most beautiful moments since 2019
+                Capturing the Bay Area&apos;s best moments at iconic locations since 2019
               </p>
             </div>
             <div className="p-6">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="font-semibold text-xl mb-2">50% Below Market</h3>
+              <div className="text-4xl mb-4">🌉</div>
+              <h3 className="font-semibold text-xl mb-2">Iconic SF Backdrops</h3>
               <p className="text-gray-600">
-                Premium quality at prices that make professional photos accessible
+                Golden Gate, Embarcadero, Mission District, and hidden gems only locals know
               </p>
             </div>
             <div className="p-6">
               <div className="text-4xl mb-4">⭐</div>
               <h3 className="font-semibold text-xl mb-2">100+ Happy Clients</h3>
               <p className="text-gray-600">
-                Trusted by individuals and families across the Bay Area
+                Trusted by professionals and families across the Bay Area
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Client Logos */}
+      <ClientLogos />
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
@@ -73,36 +78,35 @@ export default function Home() {
               Photography Services
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Professional sessions tailored to capture your unique story
+              Professional sessions with San Francisco as your backdrop
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Service 1: Portrait Session */}
+            {/* Service 1: Business Photography */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
               <div
                 className="h-64 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80')",
+                  backgroundImage: "url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80')",
                 }}
               />
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="font-playfair text-2xl font-bold">Portrait Session</h3>
+                  <h3 className="font-playfair text-2xl font-bold">Business Photography</h3>
                   <div className="text-right">
                     <span className="text-3xl font-bold text-gray-900">$599</span>
-                    <p className="text-sm text-gray-500 line-through">$1,200 typical</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">
-                  Perfect for professional headshots, LinkedIn profiles, and personal branding.
+                  Professional photos for LinkedIn, company websites, and personal branding. Shot on location with San Francisco&apos;s stunning cityscape as your backdrop.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-700">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    90-minute session
+                    90 minute session
                   </li>
                   <li className="flex items-center text-gray-700">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,13 +124,13 @@ export default function Home() {
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Iconic SF locations
+                    Downtown SF, SOMA, or Financial District
                   </li>
                   <li className="flex items-center text-gray-700">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Online gallery delivery
+                    Online gallery delivery within 5 days
                   </li>
                 </ul>
                 <a
@@ -151,18 +155,17 @@ export default function Home() {
                   <h3 className="font-playfair text-2xl font-bold">Family Session</h3>
                   <div className="text-right">
                     <span className="text-3xl font-bold text-gray-900">$499</span>
-                    <p className="text-sm text-gray-500 line-through">$1,050 typical</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">
-                  Capture precious family moments in San Francisco&apos;s most scenic locations.
+                  Capture precious family moments at San Francisco&apos;s most beautiful locations. Baker Beach, Golden Gate Park, Palace of Fine Arts, and more.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-700">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    2-hour session
+                    2 hour session
                   </li>
                   <li className="flex items-center text-gray-700">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -180,13 +183,13 @@ export default function Home() {
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Multiple SF locations
+                    Golden Gate, Presidio, or your favorite SF spot
                   </li>
                   <li className="flex items-center text-gray-700">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Print-ready files included
+                    Print ready files included
                   </li>
                 </ul>
                 <a
@@ -209,18 +212,24 @@ export default function Home() {
               Recent Work
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              A glimpse into the stories we&apos;ve helped capture
+              Professional portraits and family moments captured across San Francisco
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
+              "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+              "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+              "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80",
+              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80",
+              "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
+              "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80",
+              "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80",
               "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
               "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80",
               "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
-              "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
               "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80",
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
             ].map((src, index) => (
               <div
                 key={index}
@@ -251,26 +260,22 @@ export default function Home() {
                 Meet Misha
               </h2>
               <p className="text-gray-600 text-lg mb-6">
-                With over 5 years of experience capturing portraits and family moments
-                across San Francisco, I&apos;ve developed a signature style that blends
-                natural light with the city&apos;s iconic backdrops.
+                Photography has been my passion for as long as I can remember. I got my first camera at 12 and never looked back. There is something magical about freezing a moment in time, capturing the real essence of a person that words simply cannot describe.
               </p>
               <p className="text-gray-600 text-lg mb-6">
-                My approach is simple: create a relaxed, fun environment where your
-                authentic personality shines through. Whether it&apos;s a professional
-                headshot for your LinkedIn or candid family moments at Baker Beach,
-                I&apos;m here to make the experience enjoyable and the results stunning.
+                After moving to San Francisco over five years ago, I fell in love with this city. The light here is incredible. The fog rolling over the Golden Gate, the sunset at Baker Beach, the energy of downtown. Every corner tells a story, and I love helping my clients become part of it.
+              </p>
+              <p className="text-gray-600 text-lg mb-6">
+                When I am not behind the camera, I am exploring the city with my 9 year old son, finding new spots and seeing San Francisco through his eyes. Being a father has taught me patience and the importance of capturing genuine moments. These are the skills I bring to every session.
               </p>
               <p className="text-gray-600 text-lg mb-8">
-                Based in San Francisco, I know all the best spots—from the painted
-                ladies to hidden gems in the Presidio. Let&apos;s create something beautiful
-                together.
+                Whether you need a professional headshot that stands out on LinkedIn or want to capture your family at the Painted Ladies, I am here to make it happen. Let us create something amazing together.
               </p>
               <a
                 href="#book"
                 className="inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition"
               >
-                Let&apos;s Work Together
+                Let Us Work Together
               </a>
             </div>
           </div>
@@ -290,18 +295,18 @@ export default function Home() {
             {[
               {
                 name: "Sarah M.",
-                role: "Marketing Director",
-                text: "Misha made my headshot session so easy and fun. The photos turned out amazing—I've gotten so many compliments on LinkedIn!",
+                role: "Marketing Director at a Tech Startup",
+                text: "Misha made my headshot session so easy and fun. We shot near the Embarcadero and the photos turned out amazing. I have gotten so many compliments on LinkedIn!",
               },
               {
                 name: "The Chen Family",
-                role: "Family Session",
-                text: "We were nervous about keeping our kids engaged, but Misha was incredible with them. The photos captured our family perfectly.",
+                role: "Family Session at Baker Beach",
+                text: "We were nervous about keeping our kids engaged, but Misha was incredible with them. He knew exactly how to make them laugh. The photos captured our family perfectly.",
               },
               {
                 name: "David K.",
                 role: "Startup Founder",
-                text: "Professional, affordable, and the quality exceeded my expectations. Highly recommend for anyone needing corporate headshots.",
+                text: "Needed professional photos for our company website and investor deck. Misha delivered exactly what we needed. Highly recommend for anyone in the Bay Area tech scene.",
               },
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-2xl">
@@ -328,20 +333,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SF Locations Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
+              Iconic San Francisco Locations
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Your photos deserve the best backdrops the city has to offer
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { name: "Golden Gate Bridge", icon: "🌉" },
+              { name: "Baker Beach", icon: "🏖️" },
+              { name: "Palace of Fine Arts", icon: "🏛️" },
+              { name: "Embarcadero", icon: "⚓" },
+              { name: "Painted Ladies", icon: "🏠" },
+              { name: "Presidio", icon: "🌲" },
+              { name: "Mission District", icon: "🎨" },
+              { name: "Financial District", icon: "🏙️" },
+            ].map((location, index) => (
+              <div key={index} className="p-4">
+                <div className="text-4xl mb-2">{location.icon}</div>
+                <p className="text-gray-300">{location.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Booking Section */}
-      <section id="book" className="py-20 bg-gray-900 text-white">
+      <section id="book" className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
               Book Your Session
             </h2>
-            <p className="text-gray-300 text-lg">
-              Ready to capture your story? Fill out the form below and I&apos;ll get back
-              to you within 24 hours.
+            <p className="text-gray-600 text-lg">
+              Ready to capture your story in San Francisco? Fill out the form below and I will get back to you within 24 hours.
             </p>
           </div>
 
-          <BookingForm />
+          <div className="bg-gray-900 text-white p-8 md:p-12 rounded-2xl">
+            <BookingForm />
+          </div>
         </div>
       </section>
     </>
