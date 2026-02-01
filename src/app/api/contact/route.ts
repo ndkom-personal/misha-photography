@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     if (process.env.RESEND_API_KEY) {
       const resend = new Resend(process.env.RESEND_API_KEY);
 
-      await resend.emails.send({
+      const { data: emailData, error } = await resend.emails.send({
         from: "Misha Bay Photography <onboarding@resend.dev>",
         to: ["mishabayarea@gmail.com"],
         replyTo: data.email,
@@ -62,11 +62,21 @@ export async function POST(request: Request) {
           </div>
         `,
       });
+
+      if (error) {
+        console.error("Resend error:", error);
+        return NextResponse.json(
+          { error: "Failed to send email", details: error.message },
+          { status: 500 }
+        );
+      }
+
+      console.log("Email sent successfully:", emailData?.id);
+      return NextResponse.json({ success: true, emailId: emailData?.id });
     } else {
       console.log("RESEND_API_KEY not configured. Booking request:", data);
+      return NextResponse.json({ success: true, note: "Email not configured" });
     }
-
-    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Error processing booking request:", error);
     return NextResponse.json(
