@@ -1,0 +1,7 @@
+# robots.txt for Misha Photography
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mishabay.com/sitemap.xml
