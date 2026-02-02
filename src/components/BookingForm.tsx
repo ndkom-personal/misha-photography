@@ -7,7 +7,7 @@ export default function BookingForm() {
     name: "",
     email: "",
     phone: "",
-    service: "portrait",
+    service: "business",
     date: "",
     message: "",
   });
@@ -31,7 +31,7 @@ export default function BookingForm() {
           name: "",
           email: "",
           phone: "",
-          service: "portrait",
+          service: "business",
           date: "",
           message: "",
         });
@@ -115,8 +115,8 @@ export default function BookingForm() {
             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
             className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-white/40"
           >
-            <option value="portrait" className="bg-gray-900">Portrait Session ($599)</option>
-            <option value="family" className="bg-gray-900">Family Session ($499)</option>
+            <option value="business" className="bg-gray-900">Business Photography ($599)</option>
+            <option value="family" className="bg-gray-900">Family Session ($899)</option>
           </select>
         </div>
       </div>
@@ -150,7 +150,7 @@ export default function BookingForm() {
 
       {submitStatus === "error" && (
         <p className="text-red-400 text-sm">
-          Something went wrong. Please try again or email directly at hello@mishaphoto.com
+          Something went wrong. Please try again or email directly at mishabayarea@gmail.com
         </p>
       )}
 
