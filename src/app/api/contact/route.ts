@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       const resend = new Resend(process.env.RESEND_API_KEY);
 
       const { data: emailData, error } = await resend.emails.send({
-        from: "Misha Bay Photography <onboarding@resend.dev>",
+        from: "Misha Bay Photography <noreply@mishabay.com>",
         to: ["mishabayarea@gmail.com"],
         replyTo: data.email,
         subject: `New Booking Request: ${serviceName}`,
